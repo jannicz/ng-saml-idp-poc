@@ -30,5 +30,9 @@ ng-saml-idp-poc/
 
 Further configuration options can be found [here](https://www.npmjs.com/package/saml-idp).
 
-### AWS Lambda functions
+### AWS Lambda functions and API Gateway
 
+## Setup
+
+- Find the api-id and region from the API Gateway console (i.e. https://abc123.execute-api.us-east-1.amazonaws.com/stage/api/method)
+- Replace the placeholders `AWS_API_ID` and `AWS_API_REGION` in the `environment.ts` with the real values
