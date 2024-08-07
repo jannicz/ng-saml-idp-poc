@@ -15,14 +15,11 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login() {
-    window.location.href = 'https://your-api-gateway-endpoint/initiatesaml';
-    // this.http.get('/api/saml/login').subscribe((response: any) => {
-    //   window.location.href = response.ssoUrl;
-    // });
+    window.location.href = this.apiUrl;
   }
 
-  handleSamlResponse() {
-    this.http.post('/api/saml/acs', { SAMLResponse: '...' }).subscribe((response: any) => {
+  handleSamlResponse(samlResponse: string) {
+    this.http.post(`${this.apiUrl}/acs`, { SAMLResponse: samlResponse }).subscribe((response: any) => {
       if (response.success) {
         this.router.navigate(['/dashboard']);
       }
