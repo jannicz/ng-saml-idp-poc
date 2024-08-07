@@ -1,0 +1,9 @@
+<p>Press Login to initiate the SAML login process</p>
+
+<button (click)="login()" [disabled]="redirectInfoVisible">
+  @if (redirectInfoVisible) {
+    Redirecting to AWS Lambda...
+  } @else {
+    Login with SAML
+  }
+</button>

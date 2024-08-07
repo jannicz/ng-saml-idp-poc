@@ -15,6 +15,19 @@ In the root folder of the project, you can generate a keypair using the followin
 
 `openssl req -x509 -new -newkey rsa:2048 -nodes -subj '/C=US/ST=California/L=San Francisco/O=JankyCo/CN=Test Identity Provider' -keyout idp-private-key.pem -out idp-public-cert.pem -days 7300`
 
+Your project directory should then look following:
+
+```
+ng-saml-idp-poc/
+├── idp-private-key.pem
+├── idp-public-cert.pem
+├── server/
+│   ├── index.js
+├── src/
+│   ├── app/
+├── package.json
+```
+
 Further configuration options can be found [here](https://www.npmjs.com/package/saml-idp).
 
 ### AWS Lambda functions
