@@ -1,0 +1,9 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+
+  .circle, .rect {
+    padding: 0.5rem;
+    width: 50%;
+  }
+}
